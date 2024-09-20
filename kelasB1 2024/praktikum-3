@@ -1,1 +1,70 @@
+#cuaca = "cerah"
+
+#if cuaca == "cerah":
+#    print("kamu pergi keluar ruma")
+
+#variabel akan bernilai false jika string kosong 0, [], (), {}, false
+#uang = True
+#if uang:
+#    print("Pergi ke Pasar")
+#else:
+#    print("Pergi ke rumah Teman")
+
+#nilai =  65
+
+#if nilai < 70:
+#   print("tidak lulus")
+#else:
+#   print("lulus")
+
+#nilai = -0
+
+#if nilai < 0:
+#    print("Bilangan negatif")
+#else:
+#    print("Bilangan posItif")
+
+# umur = int(input("Masukkan Umur anda: "))
+
+# if umur <= 10
+#     print("anak-anak")
+# elif umur <= 18
+#    print("remaja")
+# elif umur <= 35
+#     print("dewasa")
+# elif umur <= 65 
+#     print("peruh baya")
+# else : 
+#     print("tua")
+
+# nilai = 76
+
+# if nilai >= 80 :
+#     if nilai >= 85 : 
+#         print ("nilai A+")
+# else :  
+#     print("Nilai A-")
+# else :
+#     print("Tidak Lulus")
+
+
+# kegiatan
+print("menu")
+print("makan")
+print("minum")
+print("tidur")
+
+kegiatan = int(input("pilih kegiatan anda: "))
+
+if kegiatan == 1 : 
+    print("makan")
+if kegiatan == 2 :
+    print("minum")
+if kegiatan == 3 :
+    print("tidur")
+else :
+    print("tidak valid")
+
+
+
 
