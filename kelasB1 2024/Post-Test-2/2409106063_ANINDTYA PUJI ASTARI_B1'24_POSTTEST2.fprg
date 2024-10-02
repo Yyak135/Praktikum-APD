@@ -1,0 +1,94 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="POSTTEST2"/>
+        <attribute name="authors" value="Lenovo"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-09-18 11:08:58 PM"/>
+        <attribute name="created" value="TGVub3ZvO0xBUFRPUC0yUjBHUkFNNDsyMDI0LTA5LTE4OzA3OjAzOjE4IEFNOzI5Mzc="/>
+        <attribute name="edited" value="TGVub3ZvO0xBUFRPUC0yUjBHUkFNNDsyMDI0LTA5LTE4OzA0OjMxOjU1IFBNOzEyO0xlbm92bztMQVBUT1AtMlIwR1JBTTQ7MjAyNC0wOS0xODswNzowMzoxOCBBTTsyNDA5MTA2MDYzX0FOSU5EVFlBX1BVSklfQVNUQVJJX0IxJzI0X1BPU1RURVNUMlsxXVsxXS5mcHJnOzEwNDA5"/>
+        <attribute name="edited" value="TGVub3ZvO0xBUFRPUC0yUjBHUkFNNDsyMDI0LTA5LTE4OzExOjA4OjU4IFBNOzE2OzMxMTg="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="nama, gender" type="String" array="False" size=""/>
+            <output expression="&quot;Masukkan semua jawaban dalam CAPSLOCK (contoh : ANINDTYA)&quot;" newline="True"/>
+            <output expression="&quot;Masukkan Nama : &quot;" newline="True"/>
+            <input variable="nama"/>
+            <output expression="&quot;Masukkan Jenis Kelamin (LAKI LAKI/PEREMPUAN) : &quot;" newline="True"/>
+            <input variable="gender"/>
+            <output expression="&quot;Masukkan tinggi badan (satuan meter, contoh : 1.65) : &quot;" newline="True"/>
+            <declare name="tinggibadan" type="Real" array="False" size=""/>
+            <input variable="tinggibadan"/>
+            <output expression="&quot;Masukkan Kewarganegaraan : &quot;" newline="True"/>
+            <declare name="Kewarganegaraan" type="String" array="False" size=""/>
+            <input variable="Kewarganegaraan"/>
+            <output expression="&quot;Masukkan Umur : &quot;" newline="True"/>
+            <declare name="umur" type="Integer" array="False" size=""/>
+            <input variable="umur"/>
+            <declare name="totalVariabel" type="Real" array="False" size=""/>
+            <assign variable="totalVariabel" expression="umur + tinggibadan"/>
+            <if expression="Checkumur(umur) and CheckKewarganegaraan(Kewarganegaraan) == true">
+                <then>
+                    <output expression="&quot;========================================&quot;" newline="True"/>
+                    <output expression="&quot;                              Biodata                              &quot;" newline="True"/>
+                    <output expression="&quot;========================================&quot;" newline="True"/>
+                    <output expression="&quot;Nama : &quot; &amp; nama" newline="True"/>
+                    <output expression="&quot;Jenis Kelamin : &quot; &amp; gender" newline="True"/>
+                    <output expression="&quot;Tinggi Badan : &quot; &amp; tinggibadan &amp; &quot; meter&quot;" newline="True"/>
+                    <output expression="&quot;Kewarganegaraan : &quot; &amp; kewarganegaraan" newline="True"/>
+                    <output expression="&quot;Umur : &quot; &amp; umur &amp; &quot; tahun&quot;" newline="True"/>
+                    <output expression="&quot;Hai &quot; &amp; nama &amp;&quot;,kamu bisa mengikuti pemilu&quot;" newline="True"/>
+                    <output expression="&quot;Total Variabel : &quot; &amp; totalVariabel" newline="True"/>
+                    <output expression="&quot;========================================&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;========================================&quot;" newline="True"/>
+                    <output expression="&quot;                               Biodata                              &quot;" newline="True"/>
+                    <output expression="&quot;========================================&quot;" newline="True"/>
+                    <output expression="&quot;Nama : &quot; &amp; nama" newline="True"/>
+                    <output expression="&quot;Jenis Kelamin : &quot; &amp; gender" newline="True"/>
+                    <output expression="&quot;Tinggi Badan : &quot; &amp; tinggibadan &amp; &quot; meter&quot;" newline="True"/>
+                    <output expression="&quot;Kewarganegaraan : &quot; &amp; kewarganegaraan" newline="True"/>
+                    <output expression="&quot;Umur : &quot; &amp; umur &amp; &quot; tahun&quot;" newline="True"/>
+                    <output expression="&quot;Hai &quot; &amp; nama &amp;&quot;,kamu tidak bisa mengikuti pemilu&quot;" newline="True"/>
+                    <output expression="&quot;Total Variabel : &quot; &amp; totalVariabel" newline="True"/>
+                    <output expression="&quot;========================================&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+    <function name="CheckKewarganegaraan" type="Boolean" variable="hasil">
+        <parameters>
+            <parameter name="Kewarganegaraan" type="String" array="False"/>
+        </parameters>
+        <body>
+            <declare name="hasil" type="Boolean" array="False" size=""/>
+            <if expression="Kewarganegaraan == &quot;INDONESIA&quot;">
+                <then>
+                    <assign variable="hasil" expression="true"/>
+                </then>
+                <else>
+                    <assign variable="hasil" expression="false"/>
+                </else>
+            </if>
+        </body>
+    </function>
+    <function name="Checkumur" type="Boolean" variable="hasil">
+        <parameters>
+            <parameter name="umur" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="hasil" type="Boolean" array="False" size=""/>
+            <if expression="umur &gt;= 17">
+                <then>
+                    <assign variable="hasil" expression="true"/>
+                </then>
+                <else>
+                    <assign variable="hasil" expression="false"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
