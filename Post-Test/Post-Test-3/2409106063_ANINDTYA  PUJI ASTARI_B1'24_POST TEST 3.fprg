@@ -1,0 +1,105 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="posttest3"/>
+        <attribute name="authors" value="Lenovo"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-09-25 04:43:11 AM"/>
+        <attribute name="created" value="TGVub3ZvO0xBUFRPUC0yUjBHUkFNNDsyMDI0LTA5LTI0OzA1OjAyOjM3IFBNOzI5NDc="/>
+        <attribute name="edited" value="TGVub3ZvO0xBUFRPUC0yUjBHUkFNNDsyMDI0LTA5LTI1OzA0OjQzOjExIEFNOzg7MzA0NA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <output expression="&quot;*NOTES : PROGRAM INI HANYA BISA MENGHITUNG ANGKA DENGAN SATUAN YANG SAMA &quot; &amp; ToChar(13) &amp; &quot;(jika satuan belum sama, maka anda harus mengkonversikannya secara manual)&quot;" newline="True"/>
+            <output expression="&quot;============================================================&quot; &amp; &quot;Menu Program Menghitung Luas dan Keliling Bangun Datar&quot; &amp; &quot;============================================================&quot; &amp; &quot;  1. Lingkaran&quot; &amp; ToChar(13) &amp; &quot;2. Trapesium&quot; &amp; ToChar(13) &amp; &quot;3. Segitiga&quot; &amp; &quot;============================================================&quot;" newline="True"/>
+            <output expression="&quot;Masukkan Nomor Pilihan Menu :&quot;" newline="True"/>
+            <declare name="menu, pilihan, sisiA, sisiB, sisiC, sisiD, alas, tinggi, luas, keliling, phi, r" type="Real" array="False" size=""/>
+            <assign variable="phi" expression="3.14"/>
+            <input variable="menu"/>
+            <if expression="menu == 1">
+                <then>
+                    <output expression="&quot;Menu 1 :&quot; &amp; ToChar(13) &amp; ToChar(13) &amp; &quot;1. Luas Lingkaran&quot; &amp; ToChar(13) &amp; &quot;2. Keliling Lingkaran&quot; &amp; ToChar(13) &amp; ToChar(13) &amp; &quot;Masukkan Nomor Pilihan Anda :&quot;" newline="True"/>
+                    <input variable="pilihan"/>
+                    <if expression="pilihan == 1">
+                        <then>
+                            <output expression="&quot;Masukkan jari-jari lingkaran : &quot;" newline="True"/>
+                            <input variable="r"/>
+                            <assign variable="luas" expression="phi * r * r"/>
+                            <output expression="&quot;Luas Lingkaran = &quot; &amp; luas &amp; &quot; (satuan)^2&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <output expression="&quot;Masukkan jari-jari lingkaran : &quot;" newline="True"/>
+                            <input variable="r"/>
+                            <assign variable="keliling" expression="2 * 3.14 * r"/>
+                            <output expression="&quot;Keliling Lingkaran = &quot; &amp; keliling &amp; &quot; (satuan)^2&quot;" newline="True"/>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <if expression="menu == 2">
+                        <then>
+                            <output expression="&quot;Menu 1 :&quot; &amp; ToChar(13) &amp; ToChar(13) &amp; &quot;1. Luas Trapesium&quot; &amp; ToChar(13) &amp; &quot;2. Keliling Trapesium&quot; &amp; ToChar(13) &amp; ToChar(13) &amp; &quot;Masukkan Nomor Pilihan Anda :&quot;" newline="True"/>
+                            <input variable="pilihan"/>
+                            <if expression="pilihan == 1">
+                                <then>
+                                    <output expression="&quot;Masukkan Sisi A :&quot;" newline="True"/>
+                                    <input variable="sisiA"/>
+                                    <output expression="&quot;Masukkan Sisi B :&quot;" newline="True"/>
+                                    <input variable="sisiB"/>
+                                    <output expression="&quot;Masukkan Tinggi Trapesium :&quot;" newline="True"/>
+                                    <input variable="tinggi"/>
+                                    <assign variable="luas" expression="1/2 * (sisiA + sisiB) * tinggi"/>
+                                    <output expression="&quot;Luas Trapesium = &quot; &amp; luas &amp; &quot; (satuan)^2&quot;" newline="True"/>
+                                </then>
+                                <else>
+                                    <output expression="&quot;Masukkan Sisi A :&quot;" newline="True"/>
+                                    <input variable="sisiA"/>
+                                    <output expression="&quot;Masukkan Sisi B :&quot;" newline="True"/>
+                                    <input variable="sisiB"/>
+                                    <output expression="&quot;Masukkan Sisi C :&quot;" newline="True"/>
+                                    <input variable="sisiC"/>
+                                    <output expression="&quot;Masukkan Sisi D :&quot;" newline="True"/>
+                                    <input variable="sisiD"/>
+                                    <assign variable="keliling" expression="sisiA + sisiB + sisiC + sisiD"/>
+                                    <output expression="&quot;Keliling Trapesium = &quot; &amp; keliling &amp; &quot; (satuan)&quot;" newline="True"/>
+                                </else>
+                            </if>
+                        </then>
+                        <else>
+                            <if expression="menu == 3">
+                                <then>
+                                    <output expression="&quot;Menu 1 :&quot; &amp; ToChar(13) &amp; ToChar(13) &amp; &quot;1. Luas Segitiga&quot; &amp; ToChar(13) &amp; &quot;2. Keliling Segitiga&quot; &amp; ToChar(13) &amp; ToChar(13) &amp; &quot;Masukkan Nomor Pilihan Anda :&quot;" newline="True"/>
+                                    <input variable="pilihan"/>
+                                    <if expression="pilihan == 1">
+                                        <then>
+                                            <output expression="&quot;Masukkan alas :&quot;" newline="True"/>
+                                            <input variable="alas"/>
+                                            <output expression="&quot;Masukkan tinggi :&quot;" newline="True"/>
+                                            <input variable="tinggi"/>
+                                            <assign variable="luas" expression="1/2 * alas * tinggi"/>
+                                            <output expression="&quot;Luas Segitiga = &quot; &amp; luas &amp; &quot; (satuan)^2&quot;" newline="True"/>
+                                        </then>
+                                        <else>
+                                            <output expression="&quot;Masukkan Sisi A :&quot;" newline="True"/>
+                                            <input variable="sisiA"/>
+                                            <output expression="&quot;Masukkan Sisi B :&quot;" newline="True"/>
+                                            <input variable="sisiB"/>
+                                            <output expression="&quot;Masukkan Sisi C :&quot;" newline="True"/>
+                                            <input variable="sisiC"/>
+                                            <assign variable="keliling" expression="sisiA + sisiB + sisiC"/>
+                                            <output expression="&quot;Keliling Segitiga = &quot; &amp; keliling &amp; &quot; (satuan)&quot;" newline="True"/>
+                                        </else>
+                                    </if>
+                                </then>
+                                <else>
+                                    <output expression="&quot;Keluar dari Program&quot;" newline="True"/>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
